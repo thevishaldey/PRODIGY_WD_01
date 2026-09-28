@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Interactive Navigation Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home">MyBrand</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <h1>Scroll down and watch the menu change.</h1>
+      <p>The bar starts transparent, turns solid and slimmer once you leave the top, and highlights whichever section you're reading.</p>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>Hover any menu item to see the background tint and the underline slide in. The active link updates as sections pass under the bar.</p>
+      <div class="grid">
+        <div class="card"><b>Fixed position</b>The bar stays at the top of the viewport at all times.</div>
+        <div class="card"><b>Scroll state</b>JavaScript toggles a <code>scrolled</code> class after 40px.</div>
+        <div class="card"><b>Hover state</b>Pure CSS handles the color and underline effects.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <h2>Services</h2>
+      <p>On screens under 700px the links collapse into a menu button. Tab through the links with your keyboard to see the focus style.</p>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>To reuse this on every page of a site, put the <code>&lt;header class="nav"&gt;</code> markup, the nav CSS, and the script in shared files and include them on each page.</p>
+    </div>
+  </section>
+</main>
+<footer>Demo page</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
